@@ -40,5 +40,5 @@ jobs:
       - name: Terraform Init & Apply # ./terraform 안에 있는 terraform 자원을 init, apply
         run: |
           terraform init
-          terrafrom apply --auto-approve
+          terraform apply --auto-approve
         working-directory: ./terraform

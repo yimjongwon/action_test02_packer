@@ -15,6 +15,7 @@ terraform {
     dynamodb_table = "terraform-lock-test02" # 미리 준비된 dynamodb 테이블의 이름을 명시하면 lock 상태가 자동으로 관리된다.
     encrypt = true # tfstate에는 민감한 정보가 있을 수 있기 때문에 암호화
   }
+  
 }
 
 # AWS 프로바이더 설정: 모든 리소스는 서울 리전에 생성됩니다.
