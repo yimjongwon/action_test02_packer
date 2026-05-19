@@ -32,7 +32,7 @@ jobs:
         run: |
           packer init .
           packer build .
-        working-direcotry: ./packer
+        working-directory: ./packer
 
       - name: Setup Terraform # 테라폼 설치
         uses: hashicorp/setup-terraform@v4
