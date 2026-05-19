@@ -3,7 +3,7 @@ name: "Packer AMI 만들기"
 on:
   push:
     branches:
-      - master: # master 브랜치의 push 하면서
+      - master # master 브랜치의 push 하면서
     paths:
       - "packer/**" # packer/ 하위경로에 변화가 있을때 동작하게 한다.
   workflow_dispatch: # 원할때 deploy 할 수 있는 옵션
