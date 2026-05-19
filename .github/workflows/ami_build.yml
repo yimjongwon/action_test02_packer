@@ -41,4 +41,4 @@ jobs:
         run: |
           terraform init
           terrafrom apply --auto-approve
-        working-direcotry: ./terraform
+        working-directory: ./terraform
