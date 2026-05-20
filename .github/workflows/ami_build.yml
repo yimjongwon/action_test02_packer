@@ -2,7 +2,7 @@
 name: "Packer AMI 만들기"
 on:
   push:
-    branches:
+    branches: # ["master"]도 가능
       - master # master 브랜치의 push 하면서
     paths:
       - "packer/**" # packer/ 하위경로에 변화가 있을때 동작하게 한다.
@@ -32,6 +32,7 @@ jobs:
         run: |
           packer init .
           packer build .
+        # ./packer/xxx.pkr.hcl 파일을 이용해서 init 과 build 작업을 수행
         working-directory: ./packer
 
       - name: Setup Terraform # 테라폼 설치
@@ -41,4 +42,5 @@ jobs:
         run: |
           terraform init
           terraform apply --auto-approve
+        # ./terraform 폴더안에서 위의 명령어가 실행이 된다.
         working-directory: ./terraform
